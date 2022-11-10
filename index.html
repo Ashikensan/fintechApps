@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家で学ぶお金の授業</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/fintech.css">
+</head>
+<body>
+    
+<!-- シーン1（スタート画面） -->
+<div id="scene1">
+    <div class="block1">
+        <h1 class="scene-message txtAnime">家で学ぶお金の授業</h1>
+            <div class="btn_wrapper">
+                <section>
+                    <a href="#" class="btn_06-2 scene1_btn" id="scene2_se_play"><span>START</span></a>
+                </section>
+            </div>
+    </div>
+</div>
+
+<!-- シーン2（ゲームの説明画面） -->
+<div class="scene2 scene-wrap">
+    <div class="scene-container">
+        <img src="../img/2.jpg" alt="ブタの画像" width=200 height=200> 
+            <p class="scene-message2">
+                <span class="message2a message1a">\ \お家のお父さん、お母さんへメッセージです！！/ /</span><br>
+                家で学ぶお金の授業へようこそ！このゲームは、会社の事業活動をヒントにした子供向け金融教育アプリです。<br>
+                会社では、事業活動を貸借対照表、損益計算書などの決算書で表現しています。<br>
+                貸借対照表の数字は、日々の事業活動の結果が数字として示されています。<br>
+                その数字を見れば、どこからお金を調達して、何に使っているのかを知ることができ、健全な事業運営を知るヒントとなります。<br>
+                そこで、この考えを子供向けの金融教育に応用したのがこのアプリです！<br>
+                子供たちは普段、お手伝いをしたり、友達と遊んだり、時にお小遣いをもらって好きなお菓子や本を買って楽しんでいます。<br>
+                その何気ない日々の行動を貸借対照表の金額に置き換えて考えるのがこのアプリのコンセプトです。<br>
+                <span class="message2b">「どのような行動をすると、どんな力が身につくのか」</span>がわかるように作りました。<br>
+                目に見えるお金だけが資産ではありません。目に見えない資産（無形資産）をバランスよく身につけることも大切です。<br>
+                このゲームが、子供たちにとって金融の新しい学びとなり、豊かな思考を育むきっかけになると嬉しいです。<br>
+            </p>
+    </div>
+        <a href="#" id="#" class="scene2_btn scene2_item">授業を始める</a>
+</div>
+
+<!-- シーン３（授業の場面） -->
+<div class="scene3">
+    <div class="main-container">
+        <div>
+            <p>授業 <span id="count_num"></span>時間目</p>
+                <div id="conversationArea">
+                    <p id="message" class="scene3_head">今日の授業は何にしますか？</p>
+                </div>
+            <ul>
+                <p>稼ぐを選択</p>
+                    <ul>
+                        <li class="scene3-comment" id="kozukai">お小遣いをもらう</li>
+                        <li class="scene3-comment" id="otetsudai">家のお手伝いをする</li>
+                        <li class="scene3-comment" id="youtube">YouTubeを配信する</li>
+                    </ul>
+            </ul>
+            <ul>
+                <p class="scene3-title">勉強を選択 </p>
+                    <ul>
+                        <li class="scene3-comment" id="shukudai">学校の宿題をする</li>
+                        <li class="scene3-comment" id="juku">塾の勉強をする</li>
+                        <li class="scene3-comment" id="dokusho">本を買って読む</li>
+                    </ul>
+            </ul>
+            <ul>
+                <p class="scene3-title">外出を選択</p>
+                    <ul>
+                        <li class="scene3-comment" id="asobu">友達と遊ぶ</li>
+                        <li class="scene3-comment" id="okashi">お菓子を買いに行く</li>
+                        <li class="scene3-comment" id="tasukeru">困っている人を助ける</li>
+                    </ul>
+            </ul>
+            <ul id="invest">
+                <p class="scene3-title">投資を選択</p>
+                    <ul class="invest-wrap invest-wrap-active" id="invest_item">
+                        <li class="scene3-comment" id="ryokou">海外へ旅行する</li>
+                        <li class="scene3-comment" id="kihu">団体へ寄付する</li>
+                        <li class="scene3-comment" id="nyuugaku">G'sへ入学する</li>
+                    </ul>
+            </ul>
+        </div> 
+            <table>
+                <tr>
+                    <td class="table-item0 table-color">お金</td>
+                    <td class="table-item table-color" id="area_money">0</td>
+                    <td class="table-item1 table-color">円</td>
+                    <td class="table-item0 table-color2" rowspan="2">借金</td>
+                    <td class="table-item table-color2" rowspan="2" id="area_debt">0</td>
+                    <td class="table-item1 table-color2" rowspan="2">円</td>
+                </tr>
+                <tr>
+                    <td class="table-item0 table-color">体力</td>
+                    <td class="table-item table-color" id="area_physical">0</td>
+                    <td class="table-item1 table-color">円</td>
+                </tr>
+                <tr>
+                    <td class="table-item0 table-color">知力</td>
+                    <td class="table-item table-color" id="area_intelligence">0</td>
+                    <td class="table-item1 table-color">円</td>
+                    <td class="table-item0 table-color3" rowspan="2">信用力</td>
+                    <td class="table-item table-color3" rowspan="2" id="area_credit">0</td>
+                    <td class="table-item1 table-color3" rowspan="2">円</td>
+                </tr>
+                <tr>
+                    <td class="table-item0 table-color">人間力</td>
+                    <td class="table-item table-color" id="area_human">0</td>
+                    <td class="table-item1 table-color">円</td>
+                </tr>
+                <tr> 
+                    <td class="table-item0 table-color1" rowspan="2">資産</td>
+                    <td class="table-item table-color1" rowspan="2" id="area_assets">0</td>
+                    <td class="table-item1 table-color1" rowspan="2">円</td>
+                    <td class="table-item0 table-color4">負債</td>
+                    <td class="table-item table-color4" id="area_liabilities">0</td>
+                    <td class="table-item1 table-color4">円</td>
+                </tr>
+                <tr>
+                    <td class="table-item0 table-color5">純資産</td>
+                    <td class="table-item table-color5" id="area_netWorth">0</td>
+                    <td class="table-item1 table-color5">円</td>
+                </tr>
+            </table>
+        </div>
+            <div class="container">
+                <p>今日をもう一度やりなおせるなら、どうしたいかな？<br>（制限せずに思ったことを書いてみよう！）</p>
+                    <input type="date" style="width:150px" id="time">
+                <p class="theme">テーマは？</p>
+                    <input type="text" style="width:400px;height:20px;" id="key">
+                <p class="theme">具体的には？</p>
+                    <textarea id="memo" style="width:400px;height:60px;"></textarea>
+                        <ul class="theme btn">
+                            <li id="save">Save</li>
+                            <li id="clear">Clear</li>
+                        </ul>
+            </div>
+        <div>
+            <table id="list"></table>
+        </div>
+        </div>    
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/js/fintech.js"></script>
+</body>
+</html>

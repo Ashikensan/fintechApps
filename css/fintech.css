@@ -1,0 +1,253 @@
+html{
+    font-size: 62.5%;/* 16px × 62.5% = 10px */
+    color: black;
+    
+}
+body{
+    background-color: antiquewhite;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+}
+/* シーン1 */
+.txtAnime {
+    display: block;
+    opacity:0;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #696969;
+ }
+ .txtAnime span {
+    opacity: 0;
+    -webkit-transition: .6s ease-in-out;
+    transition: .6s ease-in-out;
+ }
+
+
+.block1{
+    height:100vh;
+    background-image:url(../img/1.jpg); /*背景に表示したい画像*/
+    background-size:cover; /*画面サイズに合わせて画像の縦横比率を調整*/
+    background-position:center; /*画像の真ん中を起点として表示させる*/
+}
+/* 写真の上のメッセージや位置を調整 */
+.scene-message{
+    position: absolute;
+    top:40%;
+    left:65%;
+    transform: translate(-50%,-50%);
+    font-size: 4.4rem;
+    color: whitesmoke;
+}
+/* スタートボタンの装飾 */
+.btn_wrapper{
+    display: none;
+}
+section {
+    max-width: 300px;
+    margin: 0 auto;
+}
+a.btn_06-2 {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-decoration: none;
+    text-align: center;
+    padding: 1.3em .5em;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    box-sizing: border-box;
+    max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+    /* ボタンの位置を調整 */
+    position: absolute;
+    top:75%;
+    left:65%;
+    transform: translate(-50%,-50%);
+    font-size: 5rem;
+}
+  a.btn_06-2 span {
+    position: relative;
+    display: block;
+    transform: translate(-3px, -3px);
+    transition: 0.3s;
+    z-index: +1;
+}
+  a.btn_06-2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: #70c818;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transform: translate(-3px, -3px);
+    transition: 0.3s;
+}
+  a.btn_06-2:hover span {
+    transform: translate(0, 0);
+}
+  a.btn_06-2:hover:after {
+    transform: translate(0, 0);
+}
+  @media all and (max-width: 1023px) {
+    a.btn_06-2 {
+      font-size: 18px;
+    }
+}
+  @media all and (max-width: 767px) {
+    a.btn_06-2 {
+      font-size: 16px;
+    }
+}
+
+/* シーン2 */
+.scene-wrap{
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.scene-container{
+    display: flex;
+    vertical-align:middle; /*中央揃え*/
+
+}
+.scene-message2{
+    text-align: left;
+    margin: auto;
+    margin: 10px;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+.message2a{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.0rem;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+.message2b{
+    font-weight: bold;
+    color: red;
+}
+.scene2_item{
+    font-size: 2.0rem;
+    text-decoration: none;
+
+}
+/* シーン3 */
+table{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 1.6rem;
+    border-collapse:  separate;
+}
+th,td {
+    border: solid 1px; /* 枠線指定 */
+}
+.table-item0{
+    width: 100px;
+}
+.table-item{
+    text-align: right;
+    width: 120px; 
+}
+.table-item1{
+    width: 50px;
+    border-left: none;
+}
+.table-color{
+    border: 1px solid  rgb(203, 203, 3); 
+    background-color: rgb(247, 247, 92);
+}
+.table-color1{
+    border: 2px solid  rgb(203, 203, 3); 
+    background-color: rgb(210, 210, 6);
+}
+.table-color2{
+    border: 1px solid rgb(189, 188, 188); 
+    background-color: rgb(236, 232, 232);
+}
+.table-color3{
+    border: 1px solid  rgb(161, 161, 247); 
+    background-color: rgb(185, 185, 243);
+}
+.table-color4{
+    border: 2px solid rgb(163, 162, 162); 
+    background-color: rgb(198, 195, 195);
+}
+.table-color5{
+    border: 2px solid rgb(169, 169, 250); 
+    background-color: rgb(149, 149, 247);
+}
+.scene3_head{
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+}
+li{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #96c468;
+    color:#fff;
+}
+.main-container{
+    display: flex;
+    margin: 20px 0 0 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    margin-left: 20px;
+}
+.sub-container{
+    display: flex;
+}
+
+.scene3-title{
+    margin-top: 5px 0 0 0;
+}
+
+.scene3-comment{
+    padding: 5px 0;
+    margin-left: 5px;
+    min-width: 160px;
+    text-align: center;
+}
+.theme{
+    margin-top: 10px;
+    min-width: 300px;
+}
+.btn{
+    font-size: 2rem;
+}
+/* シーン２を非表示 */
+.scene2{
+    display: none;
+}
+
+/* シーン3を非表示 */
+.scene3{
+    display: none;
+}
+#invest{
+    display: none;
+}
+/* 投資を選択する画面を非表示 */
+.invest-wrap{
+    height: 0;
+    opacity: 0;
+    transition: all .5s ease;    
+}
